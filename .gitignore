@@ -1,0 +1,13 @@
+.DS_Store
+.build/
+CodexUsage.app/
+dist/
+
+# Xcode
+DerivedData/
+*.xcuserstate
+xcuserdata/
+
+# Never commit local Codex data
+.codex/
+*.jsonl
