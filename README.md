@@ -8,18 +8,6 @@ Codex 5h:90% / 7d:37%
 
 > **비공식 프로젝트** — CodexUsage는 OpenAI의 공식 제품이 아니며 OpenAI와 제휴하거나 공식적으로 지원받는 프로젝트가 아닙니다.
 
-
-## Screenshots
-
-### Menu Bar
-
-<img src="screenshots/menubar.png" alt="CodexUsage Menu Bar" width="700">
-
-### Usage Details
-
-<img src="screenshots/menu.png" alt="CodexUsage Usage Details" width="500">
-
-
 ---
 
 # 🇰🇷 한국어
@@ -90,7 +78,7 @@ CodexUsage는 Codex CLI가 로컬에 기록한 최신 사용량 정보를 읽습
 
 CodexUsage는 **30초마다** 새로운 로컬 사용량 정보가 있는지 확인합니다.
 
-OpenAI 서버에 30초마다 직접 요청하는 방식이 아니므로, Codex가 새로운 사용량 정보를 로컬에 기록하기 전까지 표시값이 변경되지 않을 수 있습니다.
+OpenAI 서버에 30초마다 직접 요청하는 방식은 아닙니다. 다만 로컬 데이터에 기록된 Reset 시간이 지나면 해당 사용량 창을 자동으로 **100% remaining**으로 표시하고, 이후 Codex가 새 사용량 정보를 기록하면 실제 값으로 다시 갱신합니다.
 
 ## 개인정보 및 주의사항
 
@@ -174,7 +162,7 @@ remaining = 100 - used_percent
 
 The app checks for updated local usage information every **30 seconds**.
 
-It does **not** query OpenAI servers every 30 seconds. Values are updated when new usage information is written locally by Codex.
+It does **not** query OpenAI servers every 30 seconds. If a locally recorded reset time has already passed, that usage window is shown as **100% remaining** until Codex writes newer usage data.
 
 ## Privacy & Notes
 

@@ -5,8 +5,31 @@ struct UsageWindow {
     let windowMinutes: Int
     let resetsAt: Date?
 
+    var hasReset: Bool {
+        guard let resetsAt else {
+            return false
+        }
+
+        return Date() >= resetsAt
+    }
+
     var remainingPercent: Int {
-        max(0, min(100, Int((100.0 - usedPercent).rounded())))
+        if hasReset {
+            return 100
+        }
+
+        return max(
+            0,
+            min(100, Int((100.0 - usedPercent).rounded()))
+        )
+    }
+
+    var activeResetDate: Date? {
+        guard let resetsAt, !hasReset else {
+            return nil
+        }
+
+        return resetsAt
     }
 }
 

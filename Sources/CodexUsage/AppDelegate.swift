@@ -164,7 +164,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
 
         var title = "\(label): \(window.remainingPercent)% remaining"
 
-        if let resetsAt = window.resetsAt {
+        if let resetsAt = window.activeResetDate {
             title +=
                 " · resets \(Self.localDateFormatter.string(from: resetsAt))"
         }

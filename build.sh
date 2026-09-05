@@ -19,14 +19,8 @@ swift build -c release
 
 rm -rf "$APP"
 mkdir -p "$APP/Contents/MacOS"
-mkdir -p "$APP/Contents/Resources"
-
 cp "$BINARY" "$APP/Contents/MacOS/CodexUsage"
 cp "$ROOT/Info.plist" "$APP/Contents/Info.plist"
-
-if [ -f "$ROOT/Resources/AppIcon.icns" ]; then
-  cp "$ROOT/Resources/AppIcon.icns" "$APP/Contents/Resources/AppIcon.icns"
-fi
 
 chmod +x "$APP/Contents/MacOS/CodexUsage"
 
