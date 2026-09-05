@@ -13,11 +13,11 @@ Codex 5h:90% / 7d:37%
 
 ### Menu Bar
 
-<img src="screenshots/menu.png" alt="CodexUsage Menu Bar" width="700">
+<img src="screenshots/menubar.png" alt="CodexUsage Menu Bar" width="700">
 
 ### Usage Details
 
-<img src="screenshots/menubar.png" alt="CodexUsage Usage Details" width="500">
+<img src="screenshots/menu.png" alt="CodexUsage Usage Details" width="500">
 
 
 ---
